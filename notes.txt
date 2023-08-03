@@ -1,1 +1,2 @@
 hello mina from PC and now 4
+for build image
