@@ -1,8 +1,8 @@
-FROM openjdk:11
-LABEL JavaProgram Image
-###WORKDIR /usr/local/apeach2
-COPY JavaForDocker.jar  app.jar
-CMD java -jar app.jar 
+FROM httpd
+LABEL this first mina image
+LABEL Welcome in docker file
 
-##ENTRYPOINT ["java","-jar" , "/app.jar"]
-
+RUN touch file.txt
+COPY index.html  /usr/local/apache2/htdoc 
+ENV VAR1=mina_DevOps
+EXPOSE  80/tcp
